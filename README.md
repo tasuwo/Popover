@@ -5,6 +5,6 @@ Inspired by [shpakovski/Popup: Cocoa project with Popup window appearing from th
 
 [image](images/screenshot.gif)
 
-# LISENCE
+# LICENSE
 
 MIT License.
