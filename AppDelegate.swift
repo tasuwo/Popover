@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  MenubarApplication
+//  todolist
 //
-//  Created by tasuku tozawa on 2016/10/29.
+//  Created by tasuku tozawa on 2016/10/28.
 //  Copyright © 2016年 tasuwo. All rights reserved.
 //
 
 import Cocoa
-import Foundation
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, PanelControllerDelegate {
@@ -23,14 +22,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, PanelControllerDelegate {
 
     func togglePopover() {
         if self.panelController.window!.isVisible {
+            self.menubarController.view.setHighlight(isHighlighted: false)
             self.panelController.closePanel()
         } else {
+            self.menubarController.view.setHighlight(isHighlighted: true)
             self.panelController.openPanel()
         }
-    }
-
-    func applicationDidResignActive(_ notification: Notification) {
-        self.panelController.closePanel()
     }
 
     func statusItemViewRectForPanelController() -> NSRect {
